@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,10 +142,12 @@
   <ItemGroup>
     <ClCompile Include="Dechet.cpp" />
     <ClCompile Include="Projet2POO_CAPO_MARC.cpp" />
+    <ClCompile Include="RestantNourriture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dechet.h" />
     <ClInclude Include="Materiel.h" />
+    <ClInclude Include="RestantNourriture.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Projet2POO_CAPO_MARC.rc" />

@@ -15,17 +15,18 @@ private:
 	bool styromousse;
 	bool rigide;
 	static int idCourant; // TODO souligné dans le graphique, static ?
+
 public:
 	Dechet();
-	int getPoids() { return poids; };
-	int getId() { return id; };
-	string getDescription() { return description; };
-	int getType() { return type; };
-	string getCouleur() { return couleur; };
-	Materiel getMateriel() { return materiel; };
-	int getPurete() { return purete; };
-	bool estStyromousse() {return styromousse;};
-	bool estRigide() { return rigide; };
+	int			getPoids()const { return poids; }
+	string		getDescription()const { return description; }
+	int			getType() const { return type; }
+	int			getId()const { return id; }
+	string		getCouleur() const { return couleur; }
+	Materiel	getMateriel()const { return materiel; }
+	int			getPurete() const { return purete; }
+	bool		estStyromousse() const { return styromousse;}
+	bool		estRigide() const { return rigide; }
 
 	void setPoids(int poids);
 	void setDescription(string description);
