@@ -6,5 +6,5 @@ UQAC::UQAC()
 
 ChargementDechet* UQAC::getChargementDechet()
 {
-    return nullptr;
+    
 }

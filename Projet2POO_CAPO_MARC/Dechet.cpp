@@ -22,8 +22,8 @@ Dechet::Dechet()
 
 Dechet::Dechet(int poids, string description)
 {
+	id = idCourant;
 	this->poids = poids;
-	id = 0;		// TODO 
 	this->description = description;
 	type = 0;
 	couleur = "inconnue";
@@ -31,10 +31,11 @@ Dechet::Dechet(int poids, string description)
 	purete = 100;
 	styromousse = false;
 	rigide = true;
+	idCourant++;
 }
 
 Dechet::Dechet(int poids, string description, int type, string couleur, Materiel materiel, int purete, bool estEnStrynomousse, bool rigide) {
-	id = 0;		// TODO 
+	id = idCourant;
 	this->poids = poids;
 	this->description = description;
 	this->type = type;
@@ -43,6 +44,7 @@ Dechet::Dechet(int poids, string description, int type, string couleur, Materiel
 	this->purete = purete;
 	this->styromousse = estEnStrynomousse;
 	this->rigide = rigide;
+	idCourant++;
 }
 
 ostream& operator<<(ostream& out, const Dechet& dechet)
