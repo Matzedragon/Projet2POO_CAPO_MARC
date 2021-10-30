@@ -1,7 +1,9 @@
 #pragma once
 #include <string>
 #include "Materiel.h"
+
 using namespace std;
+
 class Dechet
 {
 private:
@@ -18,6 +20,10 @@ private:
 
 public:
 	Dechet();
+protected:
+	Dechet(int poids, string description, int type, string couleur, Materiel materiel, int purete, bool estEnStrynomousse, bool rigide);
+	Dechet(int poids, string description);
+public:
 	int			getPoids()const { return poids; }
 	string		getDescription()const { return description; }
 	int			getType() const { return type; }
@@ -33,9 +39,4 @@ public:
 	void setType(int type);
 	void setCouleur(string couleur);
 	void setPurete(int purete);
-	// TODO surcharge affichage (<<)
-protected:
-	Dechet(int poids, string description, int type, string couleur, Materiel materiel, int purete, bool estEnStrynomousse, bool rigide);
-	Dechet(int poids, string description);
 };
-

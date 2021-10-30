@@ -149,9 +149,6 @@
     <ClInclude Include="Materiel.h" />
     <ClInclude Include="RestantNourriture.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Projet2POO_CAPO_MARC.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
