@@ -1,6 +1,7 @@
 #include "Dechet.h"
 #include <iostream>
 #include <iomanip>
+#include <string>
 
 using namespace std;
 
@@ -62,4 +63,46 @@ ostream& operator<<(ostream& out, const Dechet& dechet)
 		<< setw(fieldWidth) << left << "styromousse: " << dechet.estStyromousse() << right << endl
 		<< setw(fieldWidth) << left << "rigide: " << dechet.estRigide() << right << endl;
 	return out;
+}
+
+void Dechet::setPoids(int poids) {
+	if (poids < 0 || poids>100) {
+		poids = 0;
+	}
+}
+
+void Dechet::setDescription(string description) {
+	if (description.length() < 3) {
+		description = "???";
+	}
+}
+
+void Dechet::setType(int type) {
+	constexpr int MAX = 7;
+	std::srand(std::time(nullptr));
+	int nb_aleat = rand() % MAX;
+
+	type = nb_aleat;
+}
+
+void Dechet::setCouleur(string couleur) {
+	constexpr int MAX = 7;
+	std::srand(std::time(nullptr));
+	int nb_aleat = rand() % MAX;
+
+	if (nb_aleat == 0) {
+		couleur = "inconnu";
+	}
+	else if (nb_aleat > 4) {
+		couleur = "brun";
+	}
+	else {
+		couleur = "vert";
+	}
+}
+
+void Dechet::setPurete(int purete) {
+	if (purete < 1 || purete>100) {
+		purete = 50;
+	}
 }
