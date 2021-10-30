@@ -3,10 +3,9 @@
 using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
-    //Dechet* chokapeek = new Dechet();
-    Dechet chokapeek;
-    cout << chokapeek;
+    Dechet* chokapeek = new Dechet();
+    //Dechet chokapeek;
+    cout << *chokapeek;
     
 }
 

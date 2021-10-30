@@ -16,7 +16,7 @@ private:
 	int purete;
 	bool styromousse;
 	bool rigide;
-	static int idCourant; // TODO souligné dans le graphique, static ?
+	static int idCourant;
 
 public:
 	Dechet();
@@ -33,6 +33,8 @@ public:
 	int			getPurete() const { return purete; }
 	bool		estStyromousse() const { return styromousse;}
 	bool		estRigide() const { return rigide; }
+
+	friend ostream& operator<<(ostream& out, const Dechet& dechet);
 
 	void setPoids(int poids);
 	void setDescription(string description);
