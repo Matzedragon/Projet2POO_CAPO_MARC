@@ -5,47 +5,47 @@
 
 using namespace std;
 
-int Dechet::idCourant = 0;
+int Dechet::m_idCourant = 0;
 
 Dechet::Dechet()
 {
-	poids = 0;
-	id = idCourant;
-	description = "Quelque chose";
-	type = 0;
-	couleur = "inconnue";
-	materiel = INCONNU;
-	purete = 100;
-	styromousse = false;
-	rigide = true;
-	idCourant++;
+	m_id = m_idCourant;
+	m_idCourant++;
+	setPoids(0);
+	setDescription(""); // default "???"
+	setType(0);
+	setCouleur(""); // default = inconnu
+	m_materiel = INCONNU;
+	setPurete(100);
+	m_styromousse = false;
+	m_rigide = true;
 }
 
-Dechet::Dechet(int poids, string description)
-{
-	id = idCourant;
-	this->poids = poids;
-	this->description = description;
-	type = 0;
-	couleur = "inconnue";
-	materiel = INCONNU;
-	purete = 100;
-	styromousse = false;
-	rigide = true;
-	idCourant++;
+Dechet::Dechet(int poids, string description) {
+	m_id = m_idCourant;
+	m_idCourant++;
+	setPoids(poids);
+	setDescription(description); // default "???"
+	setType(0);
+	setCouleur(""); // default = inconnu
+	m_materiel = INCONNU;
+	setPurete(100);
+	m_styromousse = false;
+	m_rigide = true;
 }
 
 Dechet::Dechet(int poids, string description, int type, string couleur, Materiel materiel, int purete, bool estEnStrynomousse, bool rigide) {
-	id = idCourant;
-	this->poids = poids;
-	this->description = description;
-	this->type = type;
-	this->couleur = couleur;
-	this->materiel = materiel;
-	this->purete = purete;
-	this->styromousse = estEnStrynomousse;
-	this->rigide = rigide;
-	idCourant++;
+	m_id = m_idCourant;
+	m_idCourant++;
+	setPoids(poids);
+	setDescription(description); // default "???"
+	setType(type);
+	setCouleur(couleur); // default = inconnu
+	m_materiel = materiel;
+	setPurete(purete);
+	m_styromousse = estEnStrynomousse;
+	m_rigide = rigide;
+	
 }
 
 ostream& operator<<(ostream& out, const Dechet& dechet)
@@ -67,42 +67,44 @@ ostream& operator<<(ostream& out, const Dechet& dechet)
 
 void Dechet::setPoids(int poids) {
 	if (poids < 0 || poids>100) {
-		poids = 0;
+		m_poids = 0;
+	}
+	else {
+		m_poids = poids;
 	}
 }
 
 void Dechet::setDescription(string description) {
 	if (description.length() < 3) {
-		description = "???";
+		m_description = "???";
+	} else {
+		m_description = description;
 	}
 }
 
 void Dechet::setType(int type) {
-	constexpr int MAX = 7;
-	std::srand(std::time(nullptr));
-	int nb_aleat = rand() % MAX;
-
-	type = nb_aleat;
+	if (type >= 0 && type <= 7) {
+		m_type = type;
+	}
+	else {
+		m_type = 0;
+	}
 }
 
 void Dechet::setCouleur(string couleur) {
-	constexpr int MAX = 7;
-	std::srand(std::time(nullptr));
-	int nb_aleat = rand() % MAX;
-
-	if (nb_aleat == 0) {
-		couleur = "inconnu";
-	}
-	else if (nb_aleat > 4) {
-		couleur = "brun";
+	if (couleur != "vert" && couleur != "brun") {
+		m_couleur = "inconnu";
 	}
 	else {
-		couleur = "vert";
+		m_couleur = couleur;
 	}
 }
 
 void Dechet::setPurete(int purete) {
 	if (purete < 1 || purete>100) {
-		purete = 50;
+		m_purete = 100;
+	}
+	else {
+		m_purete = purete;
 	}
 }
