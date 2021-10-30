@@ -10,6 +10,10 @@ ChargementDechet::ChargementDechet(list<Dechet*>* listeDechets)
 	m_plisteDechets = listeDechets;
 }
 
+list<Dechet*>* ChargementDechet::getDechet() {
+	return m_plisteDechets;
+}
+
 ChargementDechet::~ChargementDechet()
 {
 	delete m_plisteDechets;
