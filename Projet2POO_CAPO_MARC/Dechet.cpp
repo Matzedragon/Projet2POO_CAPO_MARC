@@ -61,7 +61,8 @@ ostream& operator<<(ostream& out, const Dechet& dechet)
 		<< setw(fieldWidth) << left << "materiel: " << dechet.getMateriel() << right << endl
 		<< setw(fieldWidth) << left << "purete: " << dechet.getPurete() << right << endl
 		<< setw(fieldWidth) << left << "styromousse: " << dechet.estStyromousse() << right << endl
-		<< setw(fieldWidth) << left << "rigide: " << dechet.estRigide() << right << endl;
+		<< setw(fieldWidth) << left << "rigide: " << dechet.estRigide() << right << endl
+		<<"--------------------------------------------------" << endl;
 	return out;
 }
 
