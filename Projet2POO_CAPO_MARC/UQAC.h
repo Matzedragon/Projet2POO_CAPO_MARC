@@ -4,6 +4,7 @@ class UQAC
 {
 public:
 	UQAC();
+	~UQAC() {}
 	static ChargementDechet* getChargementDechet();
 
 };

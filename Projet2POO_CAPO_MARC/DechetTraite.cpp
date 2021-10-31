@@ -9,3 +9,8 @@ DechetTraite::DechetTraite()
 {
 	m_dechet = NULL;
 }
+
+DechetTraite::~DechetTraite()
+{
+	delete m_dechet;
+}

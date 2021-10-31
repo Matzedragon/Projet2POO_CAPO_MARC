@@ -7,6 +7,7 @@ protected:
 public:
 	DechetTraite(Dechet* dechet);
 	DechetTraite();
+	~DechetTraite();
 	Dechet const* getDechet() {return m_dechet;}
 };
 

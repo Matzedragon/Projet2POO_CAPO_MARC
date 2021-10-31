@@ -18,12 +18,13 @@ private:
 	bool m_rigide;
 	static int m_idCourant;
 
-public:
-	Dechet();
+
 protected:
 	Dechet(int poids, string description, int type, string couleur, Materiel materiel, int purete, bool estEnStrynomousse, bool rigide);
 	Dechet(int poids, string description);
 public:
+	Dechet();
+	~Dechet();
 	int			getPoids()const { return m_poids; }
 	string		getDescription()const { return m_description; }
 	int			getType() const { return m_type; }

@@ -5,5 +5,6 @@ class DechetTraiteNonRecyclable : public DechetTraite
 public:
 	DechetTraiteNonRecyclable(Dechet* dechet);
 	DechetTraiteNonRecyclable();
+	~DechetTraiteNonRecyclable() {}
 };
 

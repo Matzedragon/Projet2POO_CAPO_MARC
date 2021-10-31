@@ -21,6 +21,10 @@ Dechet::Dechet()
 	m_rigide = true;
 }
 
+Dechet::~Dechet()
+{
+}
+
 Dechet::Dechet(int poids, string description) {
 	m_id = m_idCourant;
 	m_idCourant++;
