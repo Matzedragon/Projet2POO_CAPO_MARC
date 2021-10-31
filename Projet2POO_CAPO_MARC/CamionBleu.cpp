@@ -1,14 +1,14 @@
 #include "CamionBleu.h"
 
-CamionBleu::CamionBleu(int maxCapacite)
+CamionBleu::CamionBleu(int maxCapacite) : Camion(maxCapacite)
 {
 }
 
-CamionBleu::CamionBleu()
+CamionBleu::CamionBleu() : Camion()
 {
 }
 
 bool CamionBleu::ajouterDechet(DechetTraiteRecyclable* dechetTraite)
 {
-	return false;
+	return Camion::ajouterDechet(dechetTraite);
 }

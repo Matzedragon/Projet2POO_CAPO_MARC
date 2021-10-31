@@ -1,7 +1,11 @@
 #include "Depot.h"
+#include <iomanip>
 
 Depot::Depot()
 {
+    m_totalDTCompostable = 0;
+    m_totalDTNonRecyclable = 0;
+    m_totalDTRecyclable = 0;
 }
 
 CamionBleu* Depot::getCamionBleu()
@@ -39,5 +43,13 @@ void Depot::depotDechetsTraites(CamionBrun* camion)
 
 ostream& operator<<(ostream& out, const Depot& depot)
 {
-    // TODO: insérer une instruction return ici
+	string description = "totalDTNonRecyclable: ";
+	size_t fieldWidth = description.size() + 1;
+
+	out << "-- DEPOT -- " << endl 
+        << setw(fieldWidth) << left << "totalDTRecyclable: " << depot.m_totalDTRecyclable << right << endl
+        << setw(fieldWidth) << left << "totalDTNonRecyclable: " << depot.m_totalDTNonRecyclable << right << endl
+        << setw(fieldWidth) << left << "totalDTCompostable: " << depot.m_totalDTCompostable << right << endl
+		<< "--------------------------------------------------" << endl;
+	return out;
 }

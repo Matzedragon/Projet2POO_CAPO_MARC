@@ -1,14 +1,14 @@
 #include "CamionBrun.h"
 
-CamionBrun::CamionBrun(int maxCapacite)
+CamionBrun::CamionBrun(int maxCapacite) : Camion(maxCapacite)
 {
 }
 
-CamionBrun::CamionBrun()
+CamionBrun::CamionBrun() : Camion()
 {
 }
 
 bool CamionBrun::ajouterDechet(DechetTraiteCompostable* dechetTraite)
 {
-	return false;
+	return Camion::ajouterDechet(dechetTraite);
 }
