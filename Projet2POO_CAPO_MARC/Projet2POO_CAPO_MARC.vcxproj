@@ -175,6 +175,7 @@
     <ClCompile Include="SacChips.cpp" />
     <ClCompile Include="SequenceOperations.cpp" />
     <ClCompile Include="UQAC.cpp" />
+    <ClCompile Include="UsineTraitement.cpp" />
     <ClCompile Include="VerreCafe.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -213,6 +214,7 @@
     <ClInclude Include="SacChips.h" />
     <ClInclude Include="SequenceOperations.h" />
     <ClInclude Include="UQAC.h" />
+    <ClInclude Include="UsineTraitement.h" />
     <ClInclude Include="VerreCafe.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
