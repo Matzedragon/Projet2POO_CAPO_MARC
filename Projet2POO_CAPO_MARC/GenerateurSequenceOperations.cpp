@@ -2,13 +2,19 @@
 
 SequenceOperations* GenerateurSequenceOperations::genererSequence0(UsineTraitement* usineTraitement)
 {
+
     SequenceOperations* sequenceOp = new SequenceOperations();
-    sequenceOp->ajouterOperation(new Operation1(new CreationDechetTraiteNonRecyclable(usineTraitement), new Operation2()));
-    sequenceOp->ajouterOperation(new Operation2(new Operation6(), new Operation3()));
-    sequenceOp->ajouterOperation(new Operation3(new CreationDechetTraiteRecyclable(usineTraitement), new Operation4()));
-    sequenceOp->ajouterOperation(new Operation4(new CreationDechetTraiteCompostable(usineTraitement), new Operation5()));
-    sequenceOp->ajouterOperation(new Operation4(new CreationDechetTraiteNonRecyclable(usineTraitement), new CreationDechetTraiteCompostable(usineTraitement)));
-    sequenceOp->ajouterOperation(new Operation6(new CreationDechetTraiteNonRecyclable(usineTraitement), new CreationDechetTraiteRecyclable(usineTraitement)));
+    CreationDechetTraiteRecyclable* CreationDTR = new CreationDechetTraiteRecyclable(usineTraitement);
+    CreationDechetTraiteNonRecyclable* CreationDTNR = new CreationDechetTraiteNonRecyclable(usineTraitement);
+    CreationDechetTraiteCompostable* CreationDTC = new CreationDechetTraiteCompostable(usineTraitement);
+    Operation6* O6 = new Operation6(CreationDTNR, CreationDTR);
+    Operation5* O5 = new Operation5(CreationDTNR, CreationDTC);
+    Operation4* O4 = new Operation4(CreationDTC, O5);
+    Operation3* O3 = new Operation3(CreationDTR, O4);
+    Operation2* O2 = new Operation2(O6, O3);
+    Operation1* O1 = new Operation1(CreationDTNR, O2);
+
+    return sequenceOp->ajouterOperation(O1);
 }
 
 SequenceOperations* GenerateurSequenceOperations::genererSequence(int id, UsineTraitement* usineTraitement)

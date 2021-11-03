@@ -6,3 +6,12 @@ Operation2::Operation2(Operation* operationSuivanteTrue, Operation* operationSui
 Operation2::Operation2(){}
 
 Operation2::~Operation2(){}
+
+bool Operation2::effecterOperation(Dechet* dechet)
+{
+    bool toReturn = false;
+    if (dechet->getType() != 0 || dechet->getType() == PLASTIQUE) {
+        toReturn = true;
+    }
+    return toReturn;
+}

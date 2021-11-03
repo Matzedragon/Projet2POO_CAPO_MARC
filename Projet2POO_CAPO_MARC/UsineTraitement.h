@@ -19,6 +19,7 @@ private:
 	void creerDechetTraiteNonRecyclable(Dechet* dechet);
 	void creerDechetTraiteCompostable(Dechet* dechet);
 	void traiteDechet(Dechet* dechet);
+	friend class OperationTraitement;
 public:
 	UsineTraitement();
 	~UsineTraitement();
