@@ -6,7 +6,7 @@ private:
 	UsineTraitement* m_usineTraitement;
 public:
 	OperationTraitement();
-	OperationTraitement();
+	~OperationTraitement() { delete m_usineTraitement; }
 	bool effecterOperation(Dechet* dechet);
 protected:
 	void CreerDechetTraiteRecyclable(Dechet * dechet);

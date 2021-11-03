@@ -10,6 +10,7 @@ private:
 public:
 	GenerateurSequenceOperations();
 	GenerateurSequenceOperations();
+	~GenerateurSequenceOperations() {}
 	SequenceOperations* genererSequence(int id, UsineTraitement* usineTraitement);
 };
 

@@ -13,14 +13,14 @@
 class SequenceOperations
 {
 private:
-	Operation* listeOperations;
-	Operation* operationDemarrage;
+	Operation* m_listeOperations;
+	Operation* m_operationDemarrage;
 
 public:
 	SequenceOperations();
-	SequenceOperations();
+	~SequenceOperations() { delete m_listeOperations; delete m_operationDemarrage; }
 	SequenceOperations* ajouterOperation(Operation* operation);
 	void definirOperationDemarrage(Operation* operation);
-	Operation* getOperationDemarrage() { return operationDemarrage; }
+	Operation* getOperationDemarrage() { return m_operationDemarrage; }
 };
 
