@@ -17,6 +17,15 @@ SequenceOperations* GenerateurSequenceOperations::genererSequence0(UsineTraiteme
     return sequenceOp->ajouterOperation(O1);
 }
 
+SequenceOperations* GenerateurSequenceOperations::genererSequence1(UsineTraitement* usineTraitement)
+{
+    return nullptr;
+}
+
+GenerateurSequenceOperations::GenerateurSequenceOperations()
+{
+}
+
 SequenceOperations* GenerateurSequenceOperations::genererSequence(int id, UsineTraitement* usineTraitement)
 {
     SequenceOperations* returned;

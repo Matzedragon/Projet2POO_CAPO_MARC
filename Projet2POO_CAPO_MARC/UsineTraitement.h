@@ -5,14 +5,15 @@
 #include "CamionBrun.h"
 #include "Depot.h"
 #include "ChargementDechet.h"
+
 class UsineTraitement
 {
 private:
-	SequenceOperations* sequenceOperations;
-	Depot depot;
-	CamionBleu* camionBleu;
-	CamionVert* camionVert;
-	CamionBrun* camionBrun;
+	SequenceOperations* m_sequenceOperations;
+	Depot m_depot;
+	CamionBleu* m_camionBleu;
+	CamionVert* m_camionVert;
+	CamionBrun* m_camionBrun;
 	void preOperation();
 	void postOperation();
 	void creerDechetTraiteRecyclable(Dechet* dechet);
@@ -27,9 +28,9 @@ public:
 	void demarrerTraitements(ChargementDechet* chargement);
 
 	class Log {
-		void i(string info);
-		void i(Dechet const& dechet);
-		void i(Depot const& depot);
-	}
+		static void i(string info);
+		static void i(Dechet const& dechet);
+		static void i(Depot const& depot);
+	};
 };
 

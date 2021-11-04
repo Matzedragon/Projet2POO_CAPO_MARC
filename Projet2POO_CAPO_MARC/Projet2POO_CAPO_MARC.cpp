@@ -2,7 +2,8 @@
 #include "Dechet.h"
 #include "UQAC.h"
 #include "Depot.h"
-#include "BoiteCarton.h"
+#include "UsineTraitement.h"
+#include "GenerateurSequenceOperations.h"
 using namespace std;
 
 void laboratoire2() {
@@ -18,6 +19,13 @@ void laboratoire2() {
     camionBleu->ajouterDechet(new DechetTraiteRecyclable(new BoiteCarton()));
     depot->depotDechetsTraites(camionBleu);
     cout << *depot;*/
+    UsineTraitement* usineTraitement = new UsineTraitement();
+    GenerateurSequenceOperations gso;
+
+    usineTraitement->chargerOperations(gso.genererSequence(0, usineTraitement));
+    usineTraitement->demarrerTraitements(chargement);
+
+    delete usineTraitement;
 }
 
 int main()

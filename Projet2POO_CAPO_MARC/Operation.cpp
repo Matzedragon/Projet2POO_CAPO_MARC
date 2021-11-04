@@ -6,6 +6,8 @@ Operation::Operation()
 
 Operation::Operation(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse)
 {
+	m_operationSuivanteTrue = operationSuivanteTrue;
+	m_operationSuivanteFalse = operationSuivanteFalse;
 }
 
 Operation::~Operation()
