@@ -2,6 +2,8 @@
 
 Operation::Operation()
 {
+	m_operationSuivanteTrue = nullptr;
+	m_operationSuivanteFalse = nullptr;
 }
 
 Operation::Operation(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse)
@@ -16,12 +18,17 @@ Operation::~Operation()
 	delete m_operationSuivanteTrue;
 }
 
-bool Operation::effecterOperation(Dechet* dechet)
+bool Operation::effectuerOperation(Dechet* dechet)
 {
 	return false;
 }
 
 Operation* Operation::getOperationSuivante(bool choix)
 {
-	return nullptr;
+	if (choix == true) {
+		return m_operationSuivanteTrue;
+	}
+	else if (choix == false) {
+		return m_operationSuivanteFalse;
+	}
 }

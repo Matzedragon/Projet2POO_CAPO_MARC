@@ -6,8 +6,9 @@ Operation3::Operation3() {}
 
 Operation3::~Operation3() {}
 
-bool Operation3::effecterOperation(Dechet* dechet)
+bool Operation3::effectuerOperation(Dechet* dechet)
 {
+
     bool toReturn = false;
     if (dechet->getMateriel() == CARTON ||dechet->getMateriel() == PAPIER) {
         toReturn = true;

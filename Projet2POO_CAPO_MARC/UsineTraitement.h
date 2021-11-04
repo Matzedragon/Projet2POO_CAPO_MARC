@@ -28,6 +28,7 @@ public:
 	void demarrerTraitements(ChargementDechet* chargement);
 
 	class Log {
+	public:
 		static void i(string info);
 		static void i(Dechet const& dechet);
 		static void i(Depot const& depot);

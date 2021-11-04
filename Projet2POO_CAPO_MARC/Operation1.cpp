@@ -2,7 +2,7 @@
 
 Operation1::Operation1() {}
 
-bool Operation1::effecterOperation(Dechet* dechet)
+bool Operation1::effectuerOperation(Dechet* dechet)
 {
     bool toReturn = false;
     if (dechet->estRigide() || dechet->estStyromousse()) {

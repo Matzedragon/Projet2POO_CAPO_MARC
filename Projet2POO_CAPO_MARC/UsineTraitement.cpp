@@ -8,7 +8,7 @@ void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 		m_depot.depotDechetsTraites(m_camionVert);
 		m_camionVert = new CamionVert();
 	}
-	Log::i("Ajout DTR: " + to_string(dechet->getId()));
+	Log::i("Ajout DTNR: " + to_string(dechet->getId()));
 }
 
 void UsineTraitement::preOperation()
@@ -40,19 +40,20 @@ void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 		m_depot.depotDechetsTraites(m_camionBrun);
 		m_camionBrun = new CamionBrun();
 	}
-	Log::i("Ajout DTR: " + to_string(dechet->getId()));
+	Log::i("Ajout DTC: " + to_string(dechet->getId()));
 }
 
+// TODO appelle la méthode effectuerde Operation et pas celle des fils 
 void UsineTraitement::traiteDechet(Dechet* dechet)
 {
 	bool choixSuivant;
 	Operation* courant = m_sequenceOperations->getOperationDemarrage();
+	preOperation();
 	while (courant != nullptr) {
-		preOperation();
-		choixSuivant = courant->effecterOperation(dechet);
-		postOperation();
+		choixSuivant = courant->effectuerOperation(dechet);	
 		courant = courant->getOperationSuivante(choixSuivant);
 	}
+	postOperation();
 }
 
 UsineTraitement::UsineTraitement()
@@ -79,7 +80,7 @@ void UsineTraitement::demarrerTraitements(ChargementDechet* chargement)
 	// pour tous les éléments dans la liste de dechet de chargement on appel traiterDechet
 	auto dechetCourant = chargement->getDechet()->begin();
 	for (dechetCourant; dechetCourant != chargement->getDechet()->end(); ++dechetCourant) {
-		Log::i("Traitement du dechet" + to_string((*dechetCourant)->getId()));
+		Log::i(**dechetCourant);
 		traiteDechet(*dechetCourant);
 	}
 	delete chargement;

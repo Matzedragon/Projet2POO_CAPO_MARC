@@ -5,7 +5,7 @@ class Operation1 : public Operation
 public:
 	Operation1(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse);
 	Operation1();
-	bool effecterOperation(Dechet* dechet);
+	bool effectuerOperation(Dechet* dechet);
 	~Operation1();
 };
 

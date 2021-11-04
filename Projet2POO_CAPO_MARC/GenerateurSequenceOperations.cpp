@@ -8,7 +8,7 @@ SequenceOperations* GenerateurSequenceOperations::genererSequence0(UsineTraiteme
     CreationDechetTraiteNonRecyclable* CreationDTNR = new CreationDechetTraiteNonRecyclable(usineTraitement);
     CreationDechetTraiteCompostable* CreationDTC = new CreationDechetTraiteCompostable(usineTraitement);
     Operation6* O6 = new Operation6(CreationDTNR, CreationDTR);
-    Operation5* O5 = new Operation5(CreationDTNR, CreationDTC);
+    Operation5* O5 = new Operation5(CreationDTC,CreationDTNR);
     Operation4* O4 = new Operation4(CreationDTC, O5);
     Operation3* O3 = new Operation3(CreationDTR, O4);
     Operation2* O2 = new Operation2(O6, O3);

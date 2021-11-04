@@ -6,10 +6,9 @@ private:
 	Operation* m_operationSuivanteTrue;
 	Operation* m_operationSuivanteFalse;
 public:
-	Operation();
 	Operation(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse);
 	~Operation();
-	bool effecterOperation(Dechet* dechet);
+	virtual bool effectuerOperation(Dechet* dechet);
 	Operation* getOperationSuivante(bool choix);
 protected:
 	Operation();

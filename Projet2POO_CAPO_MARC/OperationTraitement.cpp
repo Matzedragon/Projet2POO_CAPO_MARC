@@ -1,5 +1,5 @@
 #include "OperationTraitement.h"
-
+#include "UsineTraitement.h"
 OperationTraitement::OperationTraitement()
 {
 	m_usineTraitement == nullptr;
@@ -10,7 +10,7 @@ OperationTraitement::OperationTraitement(UsineTraitement* usineTraitement)
 	m_usineTraitement = usineTraitement;
 }
 // not used here
-bool OperationTraitement::effecterOperation(Dechet* dechet)
+bool OperationTraitement::effectuerOperation(Dechet* dechet)
 {
 	return true;
 }

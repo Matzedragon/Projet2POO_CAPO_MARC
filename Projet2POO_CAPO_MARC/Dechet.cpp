@@ -57,16 +57,17 @@ ostream& operator<<(ostream& out, const Dechet& dechet)
 	string description = "description: ";
 	size_t fieldWidth =description.size()+1; 
 
-	out << setw(fieldWidth) << left << "id: " << dechet.getId() << right << endl
+	out << "--------------------------------------------------" << endl
+		<< setw(fieldWidth) << left << "id: " << dechet.getId() << right << endl
 		<< setw(fieldWidth) << left << "poids: " << dechet.getPoids() << right << endl
 		<< setw(fieldWidth) << left << description << dechet.getDescription() << right << endl
 		<< setw(fieldWidth) << left << "type: " << dechet.getType() << right << endl
 		<< setw(fieldWidth) << left << "couleur: " << dechet.getCouleur() << right << endl
-		<< setw(fieldWidth) << left << "materiel: " << dechet.getMateriel() << right << endl
+		<< setw(fieldWidth) << left << "materiel: " << GetNameOfMaterial(dechet.getMateriel()) << right << endl
 		<< setw(fieldWidth) << left << "purete: " << dechet.getPurete() << right << endl
 		<< setw(fieldWidth) << left << "styromousse: " << dechet.estStyromousse() << right << endl
-		<< setw(fieldWidth) << left << "rigide: " << dechet.estRigide() << right << endl
-		<<"--------------------------------------------------" << endl;
+		<< setw(fieldWidth) << left << "rigide: " << dechet.estRigide() << right << endl;
+		
 	return out;
 }
 
