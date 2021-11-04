@@ -6,7 +6,7 @@ void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 	// tant qu'on peut pas ajouter dans le camion vert on tente de vide/créer le camion
 	while(!m_camionVert->ajouterDechet(tempo)) {
 		m_depot.depotDechetsTraites(m_camionVert);
-		m_camionVert = new CamionVert();
+		m_camionVert = m_depot.getCamionVert();
 	}
 	Log::i("Ajout DTNR: " + to_string(dechet->getId()));
 }
@@ -27,7 +27,7 @@ void UsineTraitement::creerDechetTraiteRecyclable(Dechet* dechet)
 	// tant qu'on peut pas ajouter dans le camion bleu on tente de vide/créer le camion
 	while (!m_camionBleu->ajouterDechet(tempo)) {
 		m_depot.depotDechetsTraites(m_camionBleu);
-		m_camionBleu = new CamionBleu();
+		m_camionBleu = m_depot.getCamionBleu();
 	}
 	Log::i("Ajout DTR: " + to_string(dechet->getId()));
 }
@@ -38,7 +38,7 @@ void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 	// tant qu'on peut pas ajouter dans le camion brun on tente de vide/créer le camion
 	while (!m_camionBrun->ajouterDechet(tempo)) {
 		m_depot.depotDechetsTraites(m_camionBrun);
-		m_camionBrun = new CamionBrun();
+		m_camionBrun = m_depot.getCamionBrun();
 	}
 	Log::i("Ajout DTC: " + to_string(dechet->getId()));
 }
@@ -67,7 +67,10 @@ UsineTraitement::UsineTraitement()
 
 UsineTraitement::~UsineTraitement()
 {
-	delete m_camionBleu, m_camionVert, m_camionBrun, m_sequenceOperations;
+	delete m_camionBleu;
+	delete m_camionVert;
+	delete m_camionBrun;
+	delete m_sequenceOperations;
 }
 
 void UsineTraitement::chargerOperations(SequenceOperations* sequenceOperations)
@@ -84,6 +87,10 @@ void UsineTraitement::demarrerTraitements(ChargementDechet* chargement)
 		traiteDechet(*dechetCourant);
 	}
 	delete chargement;
+	m_depot.depotDechetsTraites(m_camionBleu);
+	m_depot.depotDechetsTraites(m_camionVert);
+	m_depot.depotDechetsTraites(m_camionBrun);
+	cout << m_depot << endl;
 	Log::i("Fin traitement");
 }
 
