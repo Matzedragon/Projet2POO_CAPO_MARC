@@ -14,7 +14,18 @@ SequenceOperations* GenerateurSequenceOperations::genererSequence0(UsineTraiteme
     Operation2* O2 = new Operation2(O6, O3);
     Operation1* O1 = new Operation1(CreationDTNR, O2);
 
-    return sequenceOp->ajouterOperation(O1);
+    sequenceOp->definirOperationDemarrage(O1);
+
+    sequenceOp->ajouterOperation(O1)
+              ->ajouterOperation(O2)
+              ->ajouterOperation(O3)
+              ->ajouterOperation(O4)
+              ->ajouterOperation(O5)
+              ->ajouterOperation(O6)
+              ->ajouterOperation(CreationDTR)
+              ->ajouterOperation(CreationDTNR)
+              ->ajouterOperation(CreationDTC);
+    return sequenceOp;
 }
 
 SequenceOperations* GenerateurSequenceOperations::genererSequence1(UsineTraitement* usineTraitement)

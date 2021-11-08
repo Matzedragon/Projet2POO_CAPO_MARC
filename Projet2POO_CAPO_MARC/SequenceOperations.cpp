@@ -2,14 +2,20 @@
 
 SequenceOperations::SequenceOperations()
 {
-    m_listeOperations = nullptr;
+    m_operationDemarrage = nullptr;
+}
+
+SequenceOperations::~SequenceOperations()
+{
+    for (auto o: m_listeOperations) {
+        delete o;
+    }
     m_operationDemarrage = nullptr;
 }
 
 SequenceOperations* SequenceOperations::ajouterOperation(Operation* operation)
 {
-    m_listeOperations = operation;
-    definirOperationDemarrage(operation);
+    m_listeOperations.push_back(operation);
     return this;
 }
 

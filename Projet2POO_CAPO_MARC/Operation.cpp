@@ -14,8 +14,6 @@ Operation::Operation(Operation* operationSuivanteTrue, Operation* operationSuiva
 
 Operation::~Operation()
 {
-	delete m_operationSuivanteFalse;
-	delete m_operationSuivanteTrue;
 }
 
 bool Operation::effectuerOperation(Dechet* dechet)

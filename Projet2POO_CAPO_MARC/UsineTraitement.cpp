@@ -67,9 +67,6 @@ UsineTraitement::UsineTraitement()
 
 UsineTraitement::~UsineTraitement()
 {
-	delete m_camionBleu;
-	delete m_camionVert;
-	delete m_camionBrun;
 	delete m_sequenceOperations;
 }
 
@@ -88,8 +85,11 @@ void UsineTraitement::demarrerTraitements(ChargementDechet* chargement)
 	}
 	delete chargement;
 	m_depot.depotDechetsTraites(m_camionBleu);
+	m_camionBleu = nullptr;
 	m_depot.depotDechetsTraites(m_camionVert);
+	m_camionVert = nullptr;
 	m_depot.depotDechetsTraites(m_camionBrun);
+	m_camionBrun = nullptr;
 	cout << m_depot << endl;
 	Log::i("Fin traitement");
 }

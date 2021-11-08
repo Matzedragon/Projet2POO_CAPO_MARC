@@ -6,7 +6,7 @@ class CamionBleu :public Camion
 public:
 	CamionBleu(int maxCapacite);
 	CamionBleu();
-	~CamionBleu() {}
+	~CamionBleu();
 	bool ajouterDechet(DechetTraiteRecyclable* dechetTraite);
 
 };

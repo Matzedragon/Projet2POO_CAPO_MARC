@@ -13,7 +13,7 @@ private:
 	int m_totalDTCompostable;
 public:
 	Depot();
-	~Depot() { }
+	~Depot();
 	CamionBleu* getCamionBleu();
 	CamionVert* getCamionVert();
 	CamionBrun* getCamionBrun();

@@ -9,16 +9,18 @@
 #include "CreationDechetTraiteCompostable.h"
 #include "CreationDechetTraiteNonRecyclable.h"
 #include "CreationDechetTraiteRecyclable.h"
+#include <vector>
+using namespace std;
 
 class SequenceOperations
 {
 private:
-	Operation* m_listeOperations;
+	vector<Operation*> m_listeOperations;
 	Operation* m_operationDemarrage;
 
 public:
 	SequenceOperations();
-	~SequenceOperations() { delete m_listeOperations; delete m_operationDemarrage; }
+	~SequenceOperations();
 	SequenceOperations* ajouterOperation(Operation* operation);
 	void definirOperationDemarrage(Operation* operation);
 	Operation* getOperationDemarrage() { return m_operationDemarrage; }

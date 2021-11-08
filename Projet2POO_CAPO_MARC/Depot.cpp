@@ -8,6 +8,10 @@ Depot::Depot()
     m_totalDTRecyclable = 0;
 }
 
+Depot::~Depot()
+{
+}
+
 CamionBleu* Depot::getCamionBleu()
 {
     return new CamionBleu(80);
