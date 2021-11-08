@@ -5,6 +5,7 @@ BouteilleBiere::BouteilleBiere():Dechet(5, "Une bouteille en verre",
 										BOUTEILLE, 100,
 										false, true)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 BouteilleBiere::~BouteilleBiere()

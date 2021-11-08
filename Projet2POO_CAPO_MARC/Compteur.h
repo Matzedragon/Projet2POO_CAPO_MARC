@@ -1,21 +1,18 @@
 #pragma once 
 using namespace std;
 
-class Compteur {
+class Compteur 
+{
 private:
-	int constructeur;
-	int constructeurCopie;
-	int destructeur;
+	static int constructeur;
+	static int constructeurCopie;
+	static int destructeur;
 public:
 	Compteur();
-	~Compteur();
-
-	void ajouterConstructeur()const;
-	void ajouterConstructeurCopie()const;
-	void ajouterDestructeur()const;
-	void getNbConstructeurs()const { return constructeur; }
-	void getNbConstructeursCopie()const { return constructeurCopie; }
-	void getNbDestructeurs()const { return destructeur; }
-
-	friend ostream& operator<<(ostream& out, const Depot& cpt);
+	static void ajouterConstructeur();
+	static void ajouterConstructeurCopie();
+	static void ajouterDestructeur();
+	static int getNbConstructeurs() { return constructeur; }
+	static int getNbConstructeursCopie() { return constructeurCopie; }
+	static int getNbDestructeurs() { return destructeur; }
 };

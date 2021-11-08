@@ -2,10 +2,12 @@
 
 CamionBleu::CamionBleu(int maxCapacite) : Camion(maxCapacite)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 CamionBleu::CamionBleu() : Camion()
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 CamionBleu::~CamionBleu()

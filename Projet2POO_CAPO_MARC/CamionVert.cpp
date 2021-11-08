@@ -2,10 +2,12 @@
 
 CamionVert::CamionVert(int maxCapacite) : Camion(maxCapacite)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 CamionVert::CamionVert() : Camion()
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 CamionVert::~CamionVert()

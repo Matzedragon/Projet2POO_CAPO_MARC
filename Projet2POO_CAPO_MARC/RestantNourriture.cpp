@@ -5,6 +5,7 @@ RestantNourriture::RestantNourriture() : Dechet(5, "Un restant de nourriture",
 												NOURRITURE, 100,
 												false, false)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 RestantNourriture::~RestantNourriture()

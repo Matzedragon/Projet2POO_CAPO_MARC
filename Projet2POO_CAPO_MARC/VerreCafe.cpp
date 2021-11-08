@@ -5,6 +5,7 @@ VerreCafe::VerreCafe() : Dechet(3, "Un verre à café en carton",
 								CARTON, 100,
 								false, false)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 VerreCafe::~VerreCafe()

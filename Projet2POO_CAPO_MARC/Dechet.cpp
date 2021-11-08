@@ -2,7 +2,6 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-
 using namespace std;
 
 int Dechet::m_idCourant = 0;
@@ -19,6 +18,7 @@ Dechet::Dechet()
 	setPurete(100);
 	m_styromousse = false;
 	m_rigide = true;
+	/* Compteur::ajouterConstructeur(); */
 }
 
 Dechet::~Dechet()
@@ -36,6 +36,7 @@ Dechet::Dechet(int poids, string description) {
 	setPurete(100);
 	m_styromousse = false;
 	m_rigide = true;
+	/* Compteur::ajouterConstructeur(); */
 }
 
 Dechet::Dechet(int poids, string description, int type, string couleur, Materiel materiel, int purete, bool estEnStrynomousse, bool rigide) {
@@ -49,7 +50,7 @@ Dechet::Dechet(int poids, string description, int type, string couleur, Materiel
 	setPurete(purete);
 	m_styromousse = estEnStrynomousse;
 	m_rigide = rigide;
-	
+	/* Compteur::ajouterConstructeur(); */
 }
 
 ostream& operator<<(ostream& out, const Dechet& dechet)

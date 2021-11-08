@@ -5,8 +5,10 @@ FeuillePapier::FeuillePapier() : Dechet(	1, "Une feuille de papier",
 											PAPIER, 100,
 											false, false)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 FeuillePapier::~FeuillePapier()
 {
+
 }

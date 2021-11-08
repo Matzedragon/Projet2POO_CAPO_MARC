@@ -1,9 +1,8 @@
 #include <iostream>
-#include "Dechet.h"
+//#include "Dechet.h"
 #include "UQAC.h"
-#include "Depot.h"
-#include "UsineTraitement.h"
 #include "GenerateurSequenceOperations.h"
+
 using namespace std;
 
 void laboratoire2() {
@@ -28,9 +27,18 @@ void laboratoire2() {
     delete usineTraitement;
 }
 
+
+void AfficherInformations() {
+    /*cout << endl << endl;
+    cout << endl << " --------------------------" << endl
+        << " NB constructeurs       : " << Compteur::getNbConstructeurs() << endl
+        << " NB constructeurs copie : " << Compteur::getNbConstructeursCopie() << endl
+        << " NB destructeurs        : " << Compteur::getNbDestructeurs() << endl;*/
+}
+
 int main()
 {
     laboratoire2();
-    
+    AfficherInformations();
 }
 

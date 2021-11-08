@@ -2,9 +2,11 @@
 
 DechetTraiteCompostable::DechetTraiteCompostable(Dechet* dechet)
 {
+	/* Compteur::ajouterConstructeur(); */
 	m_dechet = dechet;
 }
 
 DechetTraiteCompostable::DechetTraiteCompostable()
 {
+	/* Compteur::ajouterConstructeur(); */
 }

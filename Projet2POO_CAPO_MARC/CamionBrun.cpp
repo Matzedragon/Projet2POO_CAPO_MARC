@@ -2,10 +2,12 @@
 
 CamionBrun::CamionBrun(int maxCapacite) : Camion(maxCapacite)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 CamionBrun::CamionBrun() : Camion()
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 CamionBrun::~CamionBrun()

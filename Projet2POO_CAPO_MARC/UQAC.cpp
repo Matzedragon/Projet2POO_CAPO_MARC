@@ -14,6 +14,7 @@
 
 UQAC::UQAC()
 {
+    /* Compteur::ajouterConstructeur(); */
 }
 
 ChargementDechet* UQAC::getChargementDechet()

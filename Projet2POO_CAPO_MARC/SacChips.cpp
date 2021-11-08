@@ -5,6 +5,7 @@ SacChips::SacChips() : Dechet(	1, "un sachet en plastique",
 								PLASTIQUE, 100,
 								false, false)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 SacChips::~SacChips()

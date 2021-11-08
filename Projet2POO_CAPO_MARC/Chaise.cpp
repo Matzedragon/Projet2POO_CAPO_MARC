@@ -5,6 +5,7 @@ Chaise::Chaise() :Dechet(	40, "Une chaise en bois",
 							BOIS, 100,
 							false, true)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 Chaise::~Chaise()

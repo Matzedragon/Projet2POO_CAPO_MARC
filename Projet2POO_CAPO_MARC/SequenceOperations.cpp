@@ -2,6 +2,7 @@
 
 SequenceOperations::SequenceOperations()
 {
+    /* Compteur::ajouterConstructeur(); */
     m_operationDemarrage = nullptr;
 }
 

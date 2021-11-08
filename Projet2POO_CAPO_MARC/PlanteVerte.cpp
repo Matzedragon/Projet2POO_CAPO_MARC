@@ -5,6 +5,7 @@ PlanteVerte::PlanteVerte() : Dechet(15, "Une plante",
 									VEGETAL, 100,
 									false, false)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 PlanteVerte::~PlanteVerte()

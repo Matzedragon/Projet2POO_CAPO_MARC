@@ -2,12 +2,14 @@
 
 Operation::Operation()
 {
+	/* Compteur::ajouterConstructeur(); */
 	m_operationSuivanteTrue = nullptr;
 	m_operationSuivanteFalse = nullptr;
 }
 
 Operation::Operation(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse)
 {
+	/* Compteur::ajouterConstructeur(); */
 	m_operationSuivanteTrue = operationSuivanteTrue;
 	m_operationSuivanteFalse = operationSuivanteFalse;
 }

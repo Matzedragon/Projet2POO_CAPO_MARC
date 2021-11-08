@@ -1,38 +1,27 @@
 #include "Compteur.h"
-#include <iomanip>
 
 Compteur::Compteur()
 {
+	Compteur::constructeur = 1;
+	Compteur::constructeurCopie = 0;
+	Compteur::destructeur = 0;
 }
 
 Compteur::~Compteur()
 {
 }
 
-void Compteur::ajouterConstructeur() const
+void Compteur::ajouterConstructeur()
 {
 	constructeur++;
 }
 
-void Compteur::ajouterConstructeurCopie() const
+void Compteur::ajouterConstructeurCopie()
 {
 	constructeurCopie++;
 }
 
-void Compteur::ajouterDestructeur() const
+void Compteur::ajouterDestructeur()
 {
 	destructeur++;
-}
-
-ostream& operator<<(ostream& out, const Compteur& cpt)
-{
-	string description = "NB Constructeurs Copie : ";
-	size_t fieldWidth = description.size() + 1;
-
-	out << "-- COMPTEUR -- " << endl
-		<< setw(fieldWidth) << left << "NB Constructeurs : " << cpt.constructeur<< right << endl
-		<< setw(fieldWidth) << left << "NB Constructeurs Copie : " << cpt.constructeurCopie << right << endl
-		<< setw(fieldWidth) << left << "NB Destructeurs : " << cpt.destructeur << right << endl
-		<< "--------------------------------------------------" << endl;
-	return out;
 }

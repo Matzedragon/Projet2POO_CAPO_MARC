@@ -1,6 +1,6 @@
 #include "Operation1.h"
 
-Operation1::Operation1() {}
+Operation1::Operation1() { /* Compteur::ajouterConstructeur(); */ }
 
 bool Operation1::effectuerOperation(Dechet* dechet)
 {
@@ -15,4 +15,4 @@ Operation1::~Operation1()
 {
 }
 
-Operation1::Operation1(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse) : Operation(operationSuivanteTrue, operationSuivanteFalse) {}
+Operation1::Operation1(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse) : Operation(operationSuivanteTrue, operationSuivanteFalse) { /* Compteur::ajouterConstructeur(); */ }

@@ -3,6 +3,7 @@
 
 Depot::Depot()
 {
+    /* Compteur::ajouterConstructeur(); */
     m_totalDTCompostable = 0;
     m_totalDTNonRecyclable = 0;
     m_totalDTRecyclable = 0;

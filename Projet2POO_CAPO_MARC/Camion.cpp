@@ -1,5 +1,4 @@
 #include "Camion.h"
-
 Camion::Camion(int maxCapacite)
 {
 	m_maxCapacite = maxCapacite;
@@ -8,6 +7,7 @@ Camion::Camion(int maxCapacite)
 
 Camion::Camion()
 {
+	/* Compteur::ajouterConstructeur(); */
 	m_maxCapacite = 80;
 	m_capacite = 0;
 }

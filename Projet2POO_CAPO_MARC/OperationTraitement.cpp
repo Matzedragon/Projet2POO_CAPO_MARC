@@ -1,12 +1,15 @@
 #include "OperationTraitement.h"
 #include "UsineTraitement.h"
+
 OperationTraitement::OperationTraitement()
 {
-	m_usineTraitement == nullptr;
+	m_usineTraitement = nullptr;
+	/* Compteur::ajouterConstructeur(); */
 }
 
 OperationTraitement::OperationTraitement(UsineTraitement* usineTraitement)
 {
+	/* Compteur::ajouterConstructeur(); */
 	m_usineTraitement = usineTraitement;
 }
 // not used here

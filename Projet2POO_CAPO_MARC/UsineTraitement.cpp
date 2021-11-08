@@ -58,6 +58,8 @@ void UsineTraitement::traiteDechet(Dechet* dechet)
 
 UsineTraitement::UsineTraitement()
 {
+	
+
 	m_depot = Depot();
 	m_camionBleu = m_depot.getCamionBleu();
 	m_camionVert = m_depot.getCamionVert();

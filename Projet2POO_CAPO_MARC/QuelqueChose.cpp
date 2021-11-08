@@ -5,6 +5,7 @@ QuelqueChose::QuelqueChose() : Dechet(  0, "",
 										INCONNU, 100,
 										false, false)
 {
+	/* Compteur::ajouterConstructeur(); */
 }
 
 QuelqueChose::~QuelqueChose()
