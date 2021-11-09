@@ -12,7 +12,7 @@ ChargementDechet::ChargementDechet(list<Dechet*>* listeDechets)
 	m_plisteDechets = listeDechets;
 }
 
-list<Dechet*>* ChargementDechet::getDechet() {
+list<Dechet*>* ChargementDechet::getDechet() const {
 	return m_plisteDechets;
 }
 

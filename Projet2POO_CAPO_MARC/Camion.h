@@ -12,7 +12,7 @@ private:
 public:
 	Camion(int maxCapacite);
 	Camion();
-	~Camion();
+	virtual ~Camion();
 	bool ajouterDechet(DechetTraite* dechetTraite);
 	int viderCamion();
 };

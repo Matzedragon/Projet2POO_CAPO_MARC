@@ -10,7 +10,7 @@ private:
 public:
 	ChargementDechet();
 	ChargementDechet(list<Dechet*>* listeDechets);
-	list<Dechet*>* getDechet();
+	list<Dechet*>* getDechet() const;
 	~ChargementDechet();
 };
 

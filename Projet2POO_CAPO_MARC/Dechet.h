@@ -24,7 +24,7 @@ protected:
 	Dechet(int poids, string description);
 public:
 	Dechet();
-	~Dechet();
+	virtual ~Dechet();
 	int			getPoids()const { return m_poids; }
 	string		getDescription()const { return m_description; }
 	int			getType() const { return m_type; }

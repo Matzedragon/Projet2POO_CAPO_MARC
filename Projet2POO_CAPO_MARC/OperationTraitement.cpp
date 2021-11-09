@@ -13,6 +13,11 @@ OperationTraitement::OperationTraitement(UsineTraitement* usineTraitement)
 	m_usineTraitement = usineTraitement;
 }
 
+OperationTraitement::~OperationTraitement()
+{
+	Compteur::ajouterDestructeur();
+}
+
 bool OperationTraitement::effectuerOperation(Dechet* dechet)
 {
 	return true;

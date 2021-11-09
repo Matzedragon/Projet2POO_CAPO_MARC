@@ -1,9 +1,8 @@
 #include "DechetTraiteCompostable.h"
 
-DechetTraiteCompostable::DechetTraiteCompostable(Dechet* dechet)
+DechetTraiteCompostable::DechetTraiteCompostable(Dechet* dechet) : DechetTraite(dechet)
 {
 	Compteur::ajouterConstructeur();
-	m_dechet = dechet;
 }
 
 DechetTraiteCompostable::DechetTraiteCompostable()

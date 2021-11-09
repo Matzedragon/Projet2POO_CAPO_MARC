@@ -1,9 +1,8 @@
 #include "DechetTraiteNonRecyclable.h"
 
-DechetTraiteNonRecyclable::DechetTraiteNonRecyclable(Dechet* dechet)
+DechetTraiteNonRecyclable::DechetTraiteNonRecyclable(Dechet* dechet) : DechetTraite(dechet)
 {
 	Compteur::ajouterConstructeur();
-	m_dechet = dechet;
 }
 
 DechetTraiteNonRecyclable::DechetTraiteNonRecyclable()

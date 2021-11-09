@@ -21,7 +21,7 @@ ChargementDechet* UQAC::getChargementDechet()
 {
     list<Dechet*>* listeDechets = new list<Dechet*>;
     srand(std::time(nullptr));
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 2; i++) {
         int randDechet = rand() % (9 + 1); // nombre aléatoire entre 0 et 9
         switch (randDechet) {
         case 0:

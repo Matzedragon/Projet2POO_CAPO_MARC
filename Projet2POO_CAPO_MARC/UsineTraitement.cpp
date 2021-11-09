@@ -54,6 +54,7 @@ void UsineTraitement::traiteDechet(Dechet* dechet)
 		courant = courant->getOperationSuivante(choixSuivant);
 	}
 	postOperation();
+	delete courant;
 }
 
 UsineTraitement::UsineTraitement()
