@@ -5,9 +5,10 @@ DechetMalConcu::DechetMalConcu() : Dechet(	0, "Un déchet mal concu",
 											INCONNU, 100,
 											false, false)
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 DechetMalConcu::~DechetMalConcu()
 {
+	Compteur::ajouterDestructeur();
 }

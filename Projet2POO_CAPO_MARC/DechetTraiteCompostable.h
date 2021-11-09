@@ -5,6 +5,6 @@ class DechetTraiteCompostable : public DechetTraite
 public:
 	DechetTraiteCompostable(Dechet* dechet);
 	DechetTraiteCompostable();
-	~DechetTraiteCompostable() {}
+	~DechetTraiteCompostable() { Compteur::ajouterDestructeur(); }
 };
 

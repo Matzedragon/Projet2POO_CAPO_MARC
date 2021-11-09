@@ -18,11 +18,12 @@ Dechet::Dechet()
 	setPurete(100);
 	m_styromousse = false;
 	m_rigide = true;
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 Dechet::~Dechet()
 {
+	Compteur::ajouterDestructeur();
 }
 
 Dechet::Dechet(int poids, string description) {
@@ -31,12 +32,12 @@ Dechet::Dechet(int poids, string description) {
 	setPoids(poids);
 	setDescription(description); // default "???"
 	setType(0);
-	setCouleur(""); // default = inconnu
+	setCouleur(""); // default "inconnu"
 	m_materiel = INCONNU;
 	setPurete(100);
 	m_styromousse = false;
 	m_rigide = true;
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 Dechet::Dechet(int poids, string description, int type, string couleur, Materiel materiel, int purete, bool estEnStrynomousse, bool rigide) {
@@ -50,7 +51,7 @@ Dechet::Dechet(int poids, string description, int type, string couleur, Materiel
 	setPurete(purete);
 	m_styromousse = estEnStrynomousse;
 	m_rigide = rigide;
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 ostream& operator<<(ostream& out, const Dechet& dechet)

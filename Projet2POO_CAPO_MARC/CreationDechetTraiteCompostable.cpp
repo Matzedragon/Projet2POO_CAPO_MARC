@@ -2,12 +2,17 @@
 
 CreationDechetTraiteCompostable::CreationDechetTraiteCompostable()
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 CreationDechetTraiteCompostable::CreationDechetTraiteCompostable(UsineTraitement* usineTraitement) : OperationTraitement(usineTraitement)
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
+}
+
+CreationDechetTraiteCompostable::~CreationDechetTraiteCompostable()
+{
+	Compteur::ajouterDestructeur(); 
 }
 
 bool CreationDechetTraiteCompostable::effectuerOperation(Dechet* dechet)

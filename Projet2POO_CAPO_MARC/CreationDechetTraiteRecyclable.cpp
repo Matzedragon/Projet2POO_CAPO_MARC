@@ -1,12 +1,17 @@
 #include "CreationDechetTraiteRecyclable.h"
 CreationDechetTraiteRecyclable::CreationDechetTraiteRecyclable()
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 CreationDechetTraiteRecyclable::CreationDechetTraiteRecyclable(UsineTraitement* usineTraitement) : OperationTraitement(usineTraitement)
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
+}
+
+CreationDechetTraiteRecyclable::~CreationDechetTraiteRecyclable()
+{
+	Compteur::ajouterDestructeur();
 }
 
 bool CreationDechetTraiteRecyclable::effectuerOperation(Dechet* dechet)

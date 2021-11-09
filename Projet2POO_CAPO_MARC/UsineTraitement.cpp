@@ -59,7 +59,7 @@ void UsineTraitement::traiteDechet(Dechet* dechet)
 UsineTraitement::UsineTraitement()
 {
 	
-
+	Compteur::ajouterConstructeur();
 	m_depot = Depot();
 	m_camionBleu = m_depot.getCamionBleu();
 	m_camionVert = m_depot.getCamionVert();
@@ -69,6 +69,7 @@ UsineTraitement::UsineTraitement()
 
 UsineTraitement::~UsineTraitement()
 {
+	Compteur::ajouterDestructeur();
 	delete m_sequenceOperations;
 }
 
@@ -85,13 +86,14 @@ void UsineTraitement::demarrerTraitements(ChargementDechet* chargement)
 		Log::i(**dechetCourant);
 		traiteDechet(*dechetCourant);
 	}
-	delete chargement;
+	
 	m_depot.depotDechetsTraites(m_camionBleu);
 	m_camionBleu = nullptr;
 	m_depot.depotDechetsTraites(m_camionVert);
 	m_camionVert = nullptr;
 	m_depot.depotDechetsTraites(m_camionBrun);
 	m_camionBrun = nullptr;
+	delete chargement;
 	cout << m_depot << endl;
 	Log::i("Fin traitement");
 }

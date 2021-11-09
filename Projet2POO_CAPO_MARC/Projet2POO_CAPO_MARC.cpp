@@ -29,11 +29,11 @@ void laboratoire2() {
 
 
 void AfficherInformations() {
-    /*cout << endl << endl;
+    cout << endl << endl;
     cout << endl << " --------------------------" << endl
         << " NB constructeurs       : " << Compteur::getNbConstructeurs() << endl
         << " NB constructeurs copie : " << Compteur::getNbConstructeursCopie() << endl
-        << " NB destructeurs        : " << Compteur::getNbDestructeurs() << endl;*/
+        << " NB destructeurs        : " << Compteur::getNbDestructeurs() << endl;
 }
 
 int main()

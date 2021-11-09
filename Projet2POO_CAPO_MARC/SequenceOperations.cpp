@@ -2,7 +2,7 @@
 
 SequenceOperations::SequenceOperations()
 {
-    /* Compteur::ajouterConstructeur(); */
+    Compteur::ajouterConstructeur();
     m_operationDemarrage = nullptr;
 }
 
@@ -12,6 +12,7 @@ SequenceOperations::~SequenceOperations()
         delete o;
     }
     m_operationDemarrage = nullptr;
+    Compteur::ajouterDestructeur();
 }
 
 SequenceOperations* SequenceOperations::ajouterOperation(Operation* operation)

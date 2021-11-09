@@ -2,16 +2,17 @@
 
 CamionBrun::CamionBrun(int maxCapacite) : Camion(maxCapacite)
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 CamionBrun::CamionBrun() : Camion()
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 CamionBrun::~CamionBrun()
 {
+	Compteur::ajouterDestructeur();
 }
 
 bool CamionBrun::ajouterDechet(DechetTraiteCompostable* dechetTraite)

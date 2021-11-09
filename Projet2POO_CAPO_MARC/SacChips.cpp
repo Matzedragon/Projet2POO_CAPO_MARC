@@ -5,9 +5,10 @@ SacChips::SacChips() : Dechet(	1, "un sachet en plastique",
 								PLASTIQUE, 100,
 								false, false)
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 SacChips::~SacChips()
 {
+	Compteur::ajouterDestructeur();
 }

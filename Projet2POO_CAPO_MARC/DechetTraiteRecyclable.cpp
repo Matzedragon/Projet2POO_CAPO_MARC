@@ -3,11 +3,11 @@
 DechetTraiteRecyclable::DechetTraiteRecyclable(Dechet* dechet)
 {
 
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 	m_dechet = dechet;
 }
 
 DechetTraiteRecyclable::DechetTraiteRecyclable()
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }

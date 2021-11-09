@@ -2,16 +2,17 @@
 
 CamionBleu::CamionBleu(int maxCapacite) : Camion(maxCapacite)
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 CamionBleu::CamionBleu() : Camion()
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 CamionBleu::~CamionBleu()
 {
+	Compteur::ajouterDestructeur();
 }
 
 bool CamionBleu::ajouterDechet(DechetTraiteRecyclable* dechetTraite)

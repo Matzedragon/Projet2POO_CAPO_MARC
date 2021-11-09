@@ -35,7 +35,7 @@ SequenceOperations* GenerateurSequenceOperations::genererSequence1(UsineTraiteme
 
 GenerateurSequenceOperations::GenerateurSequenceOperations()
 {
-    /* Compteur::ajouterConstructeur(); */
+    Compteur::ajouterConstructeur();
 }
 
 SequenceOperations* GenerateurSequenceOperations::genererSequence(int id, UsineTraitement* usineTraitement)

@@ -2,13 +2,13 @@
 
 ChargementDechet::ChargementDechet()
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 	m_plisteDechets = nullptr;
 }
 
 ChargementDechet::ChargementDechet(list<Dechet*>* listeDechets)
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 	m_plisteDechets = listeDechets;
 }
 
@@ -18,5 +18,9 @@ list<Dechet*>* ChargementDechet::getDechet() {
 
 ChargementDechet::~ChargementDechet()
 {
+	Compteur::ajouterDestructeur();
+	while (!m_plisteDechets->empty()) {
+		delete m_plisteDechets->front(),m_plisteDechets->pop_front();
+	}
 	delete m_plisteDechets;
 }

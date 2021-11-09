@@ -9,7 +9,7 @@ private:
 	SequenceOperations* genererSequence1(UsineTraitement* usineTraitement);
 public:
 	GenerateurSequenceOperations();
-	~GenerateurSequenceOperations() {}
+	~GenerateurSequenceOperations() { Compteur::ajouterDestructeur(); }
 	SequenceOperations* genererSequence(int id, UsineTraitement* usineTraitement);
 };
 

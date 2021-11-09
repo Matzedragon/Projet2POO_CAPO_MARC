@@ -1,19 +1,21 @@
 #include "Camion.h"
 Camion::Camion(int maxCapacite)
 {
+	Compteur::ajouterConstructeur();
 	m_maxCapacite = maxCapacite;
 	m_capacite = 0;
 }
 
 Camion::Camion()
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 	m_maxCapacite = 80;
 	m_capacite = 0;
 }
 
 Camion::~Camion()
 {
+	Compteur::ajouterDestructeur();
 }
 
 bool Camion::ajouterDechet(DechetTraite* dechetTraite)

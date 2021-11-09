@@ -4,15 +4,15 @@
 OperationTraitement::OperationTraitement()
 {
 	m_usineTraitement = nullptr;
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 }
 
 OperationTraitement::OperationTraitement(UsineTraitement* usineTraitement)
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 	m_usineTraitement = usineTraitement;
 }
-// not used here
+
 bool OperationTraitement::effectuerOperation(Dechet* dechet)
 {
 	return true;

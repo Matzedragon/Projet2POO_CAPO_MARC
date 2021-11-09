@@ -2,20 +2,21 @@
 
 Operation::Operation()
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 	m_operationSuivanteTrue = nullptr;
 	m_operationSuivanteFalse = nullptr;
 }
 
 Operation::Operation(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse)
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 	m_operationSuivanteTrue = operationSuivanteTrue;
 	m_operationSuivanteFalse = operationSuivanteFalse;
 }
 
 Operation::~Operation()
 {
+	Compteur::ajouterDestructeur();
 }
 
 bool Operation::effectuerOperation(Dechet* dechet)

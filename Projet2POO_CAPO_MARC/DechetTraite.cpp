@@ -2,17 +2,18 @@
 
 DechetTraite::DechetTraite(Dechet* dechet)
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 	m_dechet = dechet;
 }
 
 DechetTraite::DechetTraite()
 {
-	/* Compteur::ajouterConstructeur(); */
+	Compteur::ajouterConstructeur();
 	m_dechet = NULL;
 }
 
 DechetTraite::~DechetTraite()
 {
 	delete m_dechet;
+	Compteur::ajouterDestructeur();
 }

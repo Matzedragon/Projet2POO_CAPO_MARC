@@ -4,7 +4,7 @@ class UQAC
 {
 public:
 	UQAC();
-	~UQAC() {}
+	~UQAC() { Compteur::ajouterDestructeur(); }
 	static ChargementDechet* getChargementDechet();
 
 };

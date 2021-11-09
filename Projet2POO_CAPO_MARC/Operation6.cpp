@@ -1,10 +1,10 @@
 #include "Operation6.h"
 
-Operation6::Operation6(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse) : Operation(operationSuivanteTrue, operationSuivanteFalse) { /* Compteur::ajouterConstructeur(); */ }
+Operation6::Operation6(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse) : Operation(operationSuivanteTrue, operationSuivanteFalse) { Compteur::ajouterConstructeur(); }
 
-Operation6::Operation6(){ /* Compteur::ajouterConstructeur(); */ }
+Operation6::Operation6(){ Compteur::ajouterConstructeur(); }
 
-Operation6::~Operation6(){}
+Operation6::~Operation6(){ Compteur::ajouterDestructeur(); }
 
 bool Operation6::effectuerOperation(Dechet* dechet)
 {
