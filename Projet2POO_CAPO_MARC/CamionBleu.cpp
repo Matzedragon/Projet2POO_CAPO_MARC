@@ -12,6 +12,7 @@ CamionBleu::CamionBleu() : Camion()
 
 CamionBleu::~CamionBleu()
 {
+
 	Compteur::ajouterDestructeur();
 }
 

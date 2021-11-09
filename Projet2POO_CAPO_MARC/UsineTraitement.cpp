@@ -9,6 +9,7 @@ void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 		m_camionVert = m_depot.getCamionVert();
 	}
 	Log::i("Ajout DTNR: " + to_string(dechet->getId()));
+
 }
 
 void UsineTraitement::preOperation()

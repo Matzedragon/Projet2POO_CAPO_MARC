@@ -35,10 +35,10 @@ bool Camion::ajouterDechet(DechetTraite* dechetTraite)
 
 int Camion::viderCamion()
 {
-	int poidsTot =0;
+	int poidsTot = 0;
 	while (!m_pileDechets.empty()) {
 		poidsTot += m_pileDechets.top()->getDechet()->getPoids();
-		m_pileDechets.pop();
+		delete m_pileDechets.top(), m_pileDechets.pop();
 	}
 	return poidsTot;
 }

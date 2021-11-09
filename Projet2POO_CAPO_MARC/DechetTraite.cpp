@@ -14,6 +14,5 @@ DechetTraite::DechetTraite()
 
 DechetTraite::~DechetTraite()
 {
-	delete m_dechet;
 	Compteur::ajouterDestructeur();
 }

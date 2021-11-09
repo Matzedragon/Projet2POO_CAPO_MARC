@@ -52,7 +52,7 @@ ostream& operator<<(ostream& out, const Depot& depot)
 	string description = "totalDTNonRecyclable: ";
 	size_t fieldWidth = description.size() + 1;
 
-	out << "-- DEPOT -- " << endl 
+    out << endl << "-- DEPOT -- " << endl
         << setw(fieldWidth) << left << "totalDTRecyclable: " << depot.m_totalDTRecyclable << right << endl
         << setw(fieldWidth) << left << "totalDTNonRecyclable: " << depot.m_totalDTNonRecyclable << right << endl
         << setw(fieldWidth) << left << "totalDTCompostable: " << depot.m_totalDTCompostable << right << endl

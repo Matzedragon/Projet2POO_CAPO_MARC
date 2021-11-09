@@ -1,5 +1,5 @@
 #include <iostream>
-//#include "Dechet.h"
+#include <crtdbg.h>
 #include "UQAC.h"
 #include "GenerateurSequenceOperations.h"
 
@@ -20,7 +20,6 @@ void laboratoire2() {
 
 
 void AfficherInformations() {
-    cout << endl << endl;
     cout << endl << " --------------------------" << endl
         << " NB constructeurs       : " << Compteur::getNbConstructeurs() << endl
         << " NB constructeurs copie : " << Compteur::getNbConstructeursCopie() << endl
@@ -29,6 +28,7 @@ void AfficherInformations() {
 
 int main()
 {
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
     laboratoire2();
     AfficherInformations();
 }
